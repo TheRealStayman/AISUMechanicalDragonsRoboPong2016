@@ -7,13 +7,6 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-//Defining Variables
-RobotDrive myDrive;
-Joystick controller;
-double joy1X  //Joystick 1 X,Y
-double joy1Y
-double joy2X  //Joystick 2 X,Y
-double joy2Y
 =======
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.CameraServer; //The Camera\
@@ -27,6 +20,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard; //The Dashboard
 import edu.wpi.first.wpilibj.ADXL362; //The Accelerometer
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 >>>>>>> origin/master
+
+//Defining Variables
+RobotDrive myDrive;
+Joystick controller;
+double joy1X  //Joystick 1 X,Y
+double joy1Y
+double joy2X  //Joystick 2 X,Y
+double joy2Y
 
 public class Robot extends IterativeRobot {
     
