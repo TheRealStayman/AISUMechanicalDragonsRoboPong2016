@@ -21,16 +21,20 @@ import edu.wpi.first.wpilibj.ADXL362; //The Accelerometer
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 >>>>>>> origin/master
 
-//Defining Variables
-RobotDrive myDrive;
-Joystick controller;
-double joy1X;  //Joystick 1 X,Y
-double joy1Y;
-double joy2X;  //Joystick 2 X,Y
-double joy2Y;
-
 public class Robot extends IterativeRobot {
-    
+
+	//Defining Variables
+	RobotDrive myDrive;
+	Joystick controller;
+	double joy1X;  //Joystick 1 X,Y
+	double joy1Y;
+	double joy2X;  //Joystick 2 X,Y
+	double joy2Y;
+	//Jed's Not Victor
+	VictorSP upperLeftMotor = new VictorSP(0); //Upper left Motor
+	VictorSP lowerRightMotor = new VictorSP(1); //Lower Right Motor
+	VictorSP upperRightMotor = new VictorSP(3); //Upper Right Motor
+	VictorSP lowerLeftMotor = new VictorSP(2); //Lower Left Motor   
 	
     public void robotInit() {
     	
