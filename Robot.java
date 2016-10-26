@@ -24,10 +24,10 @@ import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 //Defining Variables
 RobotDrive myDrive;
 Joystick controller;
-double joy1X  //Joystick 1 X,Y
-double joy1Y
-double joy2X  //Joystick 2 X,Y
-double joy2Y
+double joy1X;  //Joystick 1 X,Y
+double joy1Y;
+double joy2X;  //Joystick 2 X,Y
+double joy2Y;
 
 public class Robot extends IterativeRobot {
     
