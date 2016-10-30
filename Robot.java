@@ -21,16 +21,16 @@ import edu.wpi.first.wpilibj.ADXL362; //The Accelerometer
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 >>>>>>> origin/master
 
-//Defining Variables
-RobotDrive myDrive;
-Joystick controller;
-double joy1X;  //Joystick 1 X,Y
-double joy1Y;
-double joy2X;  //Joystick 2 X,Y
-double joy2Y;
+
 
 public class Robot extends IterativeRobot {
-    
+    //Defining Variables
+    Joystick controller;
+    RobotDrive drive;
+    double[] joy1;
+    double[] joy2;
+    joy1 = new double[2];
+    joy2 = new double[2];
 	
     public void robotInit() {
     	
@@ -55,5 +55,26 @@ public class Robot extends IterativeRobot {
     public void testPeriodic() {
     	
     }
+    public void updateStuff() {
+        joy1[0] = controller.getRawAxis(0); //left joystick X
+    	joy1[1] = controller.getRawAxis(1); //left joystick Y
+ //   	leftTrigger = controller.getRawAxis(2); //ball picker-upper Motors
+  //  	rightTrigger = controller.getRawAxis(3);
+    	joy2[0] = controller.getRawAxis(4); //right joystick
+    	joy2[1] = controller.getRawAxis(5);
+//    	leftBumper = controller.getRawButton(5); //Speed Boost
+  //  	xButton = controller.getRawButton(3);
+    //	yButton = controller.getRawButton(4);
+    	deadZone(); //See below
+    }
+    public void deadZone() {
+        double deadZoneDouble = 0.15;
+    	if (joy1[1] <= Math.abs(deadZoneDouble)) { //For joysticks
+    		joy1[1] = 0;
+    	}
+    	if (joy1[1] <= Math.abs(deadZoneDouble)) { //For joysticks
+    		joy1[1] = 0;
+    	}
     
+    }
 }
